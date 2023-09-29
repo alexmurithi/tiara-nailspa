@@ -7,9 +7,6 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.11",
     "@mui/material": "^5.14.11",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-app-rewire-alias": "^1.1.7",
@@ -44,10 +41,28 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "moduleNameMapper": {
+      "^@components(.*)$": "<rootDir>/src/components/$1",
+      "^@images(.*)$": "<rootDir>/src/assets/images/$1",
+      "^@themes(.*)$": "<rootDir>/src/themes/$1",
+      "^@containers(.*)$": "<rootDir>/src/containers/$1",
+      "^@styles(.*)$": "<rootDir>/src/assets/jss/$1",
+      "^@utils(.*)$": "<rootDir>/src/utils/$1",
+      "^@pages(.*)$": "<rootDir>/src/pages/$1"
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{ts,js}",
+      "!**/node_modules/**"
+    ]
+  },
   "devDependencies": {
     "@babel/core": "^7.23.0",
     "@babel/eslint-parser": "^7.22.15",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
     "eslint": "^8.50.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.0.0",
@@ -56,6 +71,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "3.0.3"
+    "prettier": "3.0.3",
+    "react-test-renderer": "^18.2.0"
   }
 }
