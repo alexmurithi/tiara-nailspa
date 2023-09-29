@@ -3,7 +3,6 @@ const { alias } = require('react-app-rewire-alias')
 module.exports = {
   webpack: config => {
     alias({
-      // define these based on your needs
       '@components': './src/components',
       '@containers': './src/containers',
       '@pages': './src/pages',
