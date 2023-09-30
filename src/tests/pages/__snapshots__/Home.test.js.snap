@@ -154,7 +154,14 @@ exports[`<Home/> renders corretly without crashing 1`] = `
                       subtitle1="p"
                       subtitle2="p"
                     >
-                      Monday - Friday : 09:00 - 17:00
+                      Monday
+                       - 
+                      Friday
+                       :
+                       
+                      09:00
+                       - 
+                      17:00
                     </p>
                     <p
                       body1="span"
@@ -169,22 +176,14 @@ exports[`<Home/> renders corretly without crashing 1`] = `
                       subtitle1="p"
                       subtitle2="p"
                     >
-                      Saturday : 11:00 - 17:00
-                    </p>
-                    <p
-                      body1="span"
-                      body2="span"
-                      className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-1gc1f5b-MuiTypography-root-heroCardContentText"
-                      h1="h1"
-                      h2="h2"
-                      h3="h3"
-                      h4="h4"
-                      h5="h5"
-                      h6="h6"
-                      subtitle1="p"
-                      subtitle2="p"
-                    >
-                      Sunday : 14:00 - 17:00
+                      Saturday
+                       - 
+                      Sunday
+                       :
+                       
+                      11:00
+                       - 
+                      17:00
                     </p>
                   </div>
                 </div>
@@ -234,7 +233,7 @@ exports[`<Home/> renders corretly without crashing 1`] = `
                       subtitle1="p"
                       subtitle2="p"
                     >
-                      tiara@nailspa.com
+                      tiaranailspa4@gmail.com
                     </p>
                     <p
                       body1="span"
@@ -249,7 +248,7 @@ exports[`<Home/> renders corretly without crashing 1`] = `
                       subtitle1="p"
                       subtitle2="p"
                     >
-                      +254712293003
+                      +254745797292
                     </p>
                   </div>
                 </div>
