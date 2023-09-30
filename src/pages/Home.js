@@ -15,6 +15,7 @@ import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined'
 import BackgroundImage from '@images/desktop/background.jpg'
 import Image from '@components/Image'
 import homeStyles from '@styles/pages/Home'
+import { hours, contacts } from '@utils/Constants'
 
 const Home = () => {
   const { classes } = homeStyles()
@@ -92,30 +93,18 @@ const Home = () => {
                           <AccessTimeOutlinedIcon fontSize="large" />
                         </Box>
                         <Box>
-                          <Typography
-                            fontWeight="bold"
-                            className={classes.heroCardContentText}
-                            variant="body1"
-                            gutterBottom
-                          >
-                            Monday - Friday : 09:00 - 17:00
-                          </Typography>
-                          <Typography
-                            fontWeight="bold"
-                            className={classes.heroCardContentText}
-                            variant="body1"
-                            gutterBottom
-                          >
-                            Saturday : 11:00 - 17:00
-                          </Typography>
-                          <Typography
-                            fontWeight="bold"
-                            className={classes.heroCardContentText}
-                            variant="body1"
-                            gutterBottom
-                          >
-                            Sunday : 14:00 - 17:00
-                          </Typography>
+                          {hours &&
+                            hours.map(hour => (
+                              <Typography
+                                fontWeight="bold"
+                                className={classes.heroCardContentText}
+                                variant="body1"
+                                gutterBottom
+                              >
+                                {hour.day.from} - {hour.day.to} :{' '}
+                                {hour.time.start} - {hour.time.end}
+                              </Typography>
+                            ))}
                         </Box>
                       </Stack>
                     </CardContent>
@@ -133,22 +122,17 @@ const Home = () => {
                           <ContactsOutlinedIcon fontSize="large" />
                         </Box>
                         <Box>
-                          <Typography
-                            fontWeight="bold"
-                            className={classes.heroCardContentText}
-                            variant="body1"
-                            gutterBottom
-                          >
-                            tiara@nailspa.com
-                          </Typography>
-                          <Typography
-                            fontWeight="bold"
-                            className={classes.heroCardContentText}
-                            variant="body1"
-                            gutterBottom
-                          >
-                            +254712293003
-                          </Typography>
+                          {contacts &&
+                            contacts.map(contact => (
+                              <Typography
+                                fontWeight="bold"
+                                className={classes.heroCardContentText}
+                                variant="body1"
+                                gutterBottom
+                              >
+                                {contact}
+                              </Typography>
+                            ))}
                         </Box>
                       </Stack>
                     </CardContent>
